@@ -17,7 +17,8 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("public")
 )
 
-publishTo := Some("Innova libs repo" at "http://repproxy.srv.inn.ru/artifactory/libs-release-local"),
+publishTo := Some("Innova libs repo" at "http://repproxy.srv.inn.ru/artifactory/libs-release-local")
+
 credentials += Credentials(Path.userHome / ".ivy2" / ".innova_credentials")
 
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.full)
