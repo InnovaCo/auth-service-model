@@ -11,6 +11,3 @@ case class AuthenticationResponseBody(authUser: AuthUser) extends Body
 
 @request(Method.GET, "/auth")
 case class AuthenticationRequest(body: AuthenticationRequestBody) extends Request[AuthenticationRequestBody]
-
-@response(Status.OK)
-case class AuthenticationResponse[+B <: AuthenticationResponseBody](body: B) extends NormalResponse with Response[B]
